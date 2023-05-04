@@ -3,7 +3,6 @@ import {
   mdiCartOutline,
   mdiChartPie,
   mdiChartTimelineVariant,
-  mdiGithub,
   mdiMonitorCellphone,
   mdiReload,
 } from '@mdi/js'
@@ -19,7 +18,6 @@ import { useSampleClients, useSampleTransactions } from '../hooks/sampleData'
 import CardBoxTransaction from '../components/CardBoxTransaction'
 import { Client, Transaction } from '../interfaces'
 import CardBoxClient from '../components/CardBoxClient'
-import SectionBannerStarOnGitHub from '../components/SectionBannerStarOnGitHub'
 import CardBox from '../components/CardBox'
 import { sampleChartData } from '../components/ChartLineSample/config'
 import ChartLineSample from '../components/ChartLineSample'
@@ -48,15 +46,7 @@ const Dashboard = () => {
       </Head>
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiChartTimelineVariant} title="Overview" main>
-          <BaseButton
-            href="https://github.com/justboil/admin-one-react-tailwind"
-            target="_blank"
-            icon={mdiGithub}
-            label="Star on GitHub"
-            color="contrast"
-            roundedFull
-            small
-          />
+          
         </SectionTitleLineWithButton>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 mb-6">
@@ -104,10 +94,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="my-6">
-          <SectionBannerStarOnGitHub />
-        </div>
-
+       
         <SectionTitleLineWithButton icon={mdiChartPie} title="Trends overview">
           <BaseButton icon={mdiReload} color="whiteDark" onClick={fillChartData} />
         </SectionTitleLineWithButton>
